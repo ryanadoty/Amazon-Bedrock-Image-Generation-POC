@@ -10,7 +10,7 @@ load_dotenv()
 # configuring the Bedrock client with your CLI profile name, and region
 boto3.setup_default_session(profile_name=os.getenv("profile_name"))
 config = botocore.config.Config(connect_timeout=120, read_timeout=120)
-bedrock = boto3.client('bedrock-runtime', 'us-east-1', endpoint_url='https://bedrock.us-east-1.amazonaws.com',
+bedrock = boto3.client('bedrock-runtime', 'us-east-1', endpoint_url='https://bedrock-runtime.us-east-1.amazonaws.com',
                        config=config)
 
 
